@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+   <section id="service.oled.cm4">
+      <category id="display" label="33000" help="">
+         <group id="0" label="">
+            <setting id="ok" label="" help="" type="boolean">
+               <level>0</level>
+               <default>false</default>
+               <dependencies>
+                  <dependency type="visible">
+                      <condition setting="interface" operator="is">255</condition>
+                  </dependency>
+               </dependencies>
+               <control type="toggle" />
+            </setting>
+            <setting id="interface" type="integer" label="30111" help="">
+               <level>0</level>
+               <default>0</default>
+               <constraints>
+                  <options>
+                     <option label="I2C">0</option>
+                     <option label="SPI">1</option>
+                  </options>
+               </constraints>
+               <control type="list" format="string">
+                  <heading>30111</heading>
+               </control>
+            </setting>
+            <setting id="driverchip0" type="integer" label="30101" help="30201">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">0</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="sh1106">0</option>
+                     <option label="sh1107">4</option>
+                     <option label="ssd1306">1</option>
+                     <option label="ssd1309">2</option>
+                     <option label="ssd1327">3</option>
+                     <option label="ssd1362">5</option>
+                  </options>
+               </constraints>
+               <control type="list" format="string">
+                  <heading>30101</heading>
+               </control>
+            </setting>
+            <setting id="driverchip1" type="integer" label="30101" help="30201">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">1</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="sh1106">0</option>
+                     <option label="sh1107">4</option>
+                     <option label="sh1122">10</option>
+                     <option label="ssd1306">1</option>
+                     <option label="ssd1309">2</option>
+                     <option label="ssd1322">6</option>
+                     <option label="ssd1322_nhd">7</option>
+                     <option label="ssd1325">8</option>
+                     <option label="ssd1327">3</option>
+                     <option label="ssd1351">9</option>
+                     <option label="ssd1362">5</option>
+                  </options>
+               </constraints>
+               <control type="list" format="string">
+                  <heading>30101</heading>
+               </control>
+            </setting>
+            <setting id="chip0" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30070">0</option>
+                     <option label="30071">1</option>
+                     <option label="30072">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip1" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">1</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30071">1</option>
+                     <option label="30072">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip2" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">2</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30071">1</option>
+                     <option label="30072">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip3" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">3</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">3</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30070">0</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip4" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>3</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">4</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">4</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30073">3</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip5" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>4</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">5</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">5</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30074">4</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip6" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>4</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">6</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30074">4</option>
+                     <option label="30075">5</option>
+                     <option label="30076">6</option>
+                     <option label="30071">1</option>
+                     <option label="30078">8</option>
+                     <option label="30072">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip7" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">7</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30071">1</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip8" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">8</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30071">1</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip9" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">9</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30070">0</option>
+                     <option label="30077">7</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="chip10" type="integer" label="30102" help="30202">
+               <level>0</level>
+               <default>4</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">10</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30074">4</option>
+ <!--                     <option label="30075">5</option>
+                     <option label="30076">6</option>
+                     <option label="30071">1</option>
+                     <option label="30078">8</option>
+                     <option label="30072">2</option>
+ -->                  </options>
+               </constraints>
+               <control type="list" format="integer">
+                  <heading>30102</heading>
+               </control>
+            </setting>
+            <setting id="rotation4" type="integer" label="30106" help="30206">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">3</condition>
+                           <condition setting="chip3" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">3</condition>
+                           <condition setting="chip3" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">9</condition>
+                           <condition setting="chip9" operator="is">0</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30320">0</option>
+                     <option label="30321">1</option>
+                     <option label="30322">2</option>
+                     <option label="30323">3</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="rotation2" type="integer" label="30106" help="30206">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">9</condition>
+                           <condition setting="chip9" operator="is">7</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <or>
+                              <condition setting="driverchip0" operator="is">1</condition>
+                              <condition setting="driverchip0" operator="is">2</condition>
+                              <condition setting="driverchip0" operator="is">5</condition>
+                           </or>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <or>
+                              <condition setting="driverchip1" operator="is">1</condition>
+                              <condition setting="driverchip1" operator="is">2</condition>
+                              <condition setting="driverchip1" operator="is">5</condition>
+                              <condition setting="driverchip1" operator="is">6</condition>
+                              <condition setting="driverchip1" operator="is">7</condition>
+                              <condition setting="driverchip1" operator="is">8</condition>
+							  <condition setting="driverchip1" operator="is">10</condition>
+                           </or>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30320">0</option>
+                     <option label="30322">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="rotation3" type="integer" label="30106" help="30206">
+               <level>0</level>
+               <default>1</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">4</condition>
+                           <condition setting="chip4" operator="is">3</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">4</condition>
+                           <condition setting="chip4" operator="is">3</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30321">1</option>
+                     <option label="30323">3</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="lines128" type="integer" label="30103" help="30203">
+               <level>0</level>
+               <default>8</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">3</condition>
+                           <condition setting="chip3" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">3</condition>
+                           <condition setting="chip3" operator="is">0</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">9</condition>
+                           <condition setting="chip9" operator="is">0</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30004">4</option>
+                     <option label="30005">5</option>
+                     <option label="30006">6</option>
+                     <option label="30007">7</option>
+                     <option label="30008">8</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="lines96" type="integer" label="30103" help="30203">
+               <level>0</level>
+               <default>6</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition setting="interface" operator="is">1</condition>
+                        <condition setting="driverchip1" operator="is">9</condition>
+                        <condition setting="chip9" operator="is">7</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30003">3</option>
+                     <option label="30004">4</option>
+                     <option label="30005">5</option>
+                     <option label="30006">6</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="lines64" type="integer" label="30103" help="30203">
+               <level>0</level>
+               <default>4</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">1</condition>
+                           <condition setting="chip1" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">1</condition>
+                           <condition setting="chip1" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">2</condition>
+                           <condition setting="chip2" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">2</condition>
+                           <condition setting="chip2" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">7</condition>
+                           <condition setting="chip7" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">8</condition>
+                           <condition setting="chip8" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">1</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">4</condition>
+                           <condition setting="chip4" operator="is">3</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">4</condition>
+                           <condition setting="chip4" operator="is">3</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">5</condition>
+                           <condition setting="chip5" operator="is">4</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">5</condition>
+                           <condition setting="chip5" operator="is">4</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">4</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">4</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30002">2</option>
+                     <option label="30003">3</option>
+                     <option label="30004">4</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="lines48" type="integer" label="30103" help="30203">
+               <level>0</level>
+               <default>3</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">5</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">5</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">8</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">8</condition>
+                        </and>                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30002">2</option>
+                     <option label="30003">3</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="lines32" type="integer" label="30103" help="30203">
+               <level>0</level>
+               <default>2</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <or>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">0</condition>
+                           <condition setting="chip0" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">1</condition>
+                           <condition setting="chip1" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">1</condition>
+                           <condition setting="chip1" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">0</condition>
+                           <condition setting="driverchip0" operator="is">2</condition>
+                           <condition setting="chip2" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">2</condition>
+                           <condition setting="chip2" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">6</condition>
+                           <condition setting="chip6" operator="is">6</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">2</condition>
+                        </and>
+                        <and>
+                           <condition setting="interface" operator="is">1</condition>
+                           <condition setting="driverchip1" operator="is">10</condition>
+                           <condition setting="chip10" operator="is">6</condition>
+                        </and>
+                     </or>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30001">1</option>
+                     <option label="30002">2</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="bcklght1" type="integer" label="30107" help="30207">
+               <level>0</level>
+               <default>125</default>
+               <constraints>
+                  <minimum>25</minimum>
+                  <step>25</step>
+                  <maximum>250</maximum>
+               </constraints>
+               <control type="slider" format="integer" />
+            </setting>
+            <setting id="bcklght0" type="integer" label="30108" help="30208">
+               <level>0</level>
+               <default>25</default>
+               <constraints>
+                  <minimum>0</minimum>
+                  <step>25</step>
+                  <maximum>250</maximum>
+               </constraints>
+               <control type="slider" format="integer" />
+            </setting>
+            <setting id="regfont" type="path" label="30114" help="30214">
+                <level>0</level>
+                <default>/storage/.kodi/userdata/fonts/regular/</default>
+                <constraints>
+                    <writable>false</writable>
+                    <allowempty>false</allowempty>
+                    <masking>*.otf|*.ttf</masking>
+                </constraints>
+                <control type="button" format="file">
+                    <heading>30114</heading>
+                </control>
+            </setting>
+            <setting id="monofont" type="path" label="30115" help="30215">
+                <level>0</level>
+                <default>/storage/.kodi/userdata/fonts/mono/</default>
+                <constraints>
+                    <writable>false</writable>
+                    <allowempty>false</allowempty>
+                    <masking>*.otf|*.ttf</masking>
+                </constraints>
+                <control type="button" format="file">
+                    <heading>30115</heading>
+                </control>
+            </setting>
+         </group>
+      </category>
+
+      <category id="connection" label="33001" help="">
+         <group id="1" label="">
+            <setting id="i2cport" type="integer" label="30105" help="30205">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">0</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30100">0</option>
+                     <option label="30001">1</option>
+                     <option label="30002">2</option>
+                     <option label="30003">3</option>
+                     <option label="30004">4</option>
+                     <option label="30005">5</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="address" type="integer" label="30104" help="30204">
+               <level>0</level>
+               <default>60</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">0</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <minimum>0</minimum>
+                  <step>1</step>
+                  <maximum>127</maximum>
+               </constraints>
+               <control type="slider" format="integer">
+                  <formatlabel>30061</formatlabel>
+               </control>
+            </setting>
+            <setting id="spiport" type="integer" label="30112" help="30212">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">1</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30100">0</option>
+                     <option label="30001">1</option>
+                     <option label="30002">2</option>
+                     <option label="30003">3</option>
+                     <option label="30004">4</option>
+                     <option label="30005">5</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="spidevice" type="integer" label="30113" help="30213">
+               <level>0</level>
+               <default>0</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <condition setting="interface" operator="is">1</condition>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30100">0</option>
+                     <option label="30001">1</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+            <setting id="board" type="integer" label="30110" help="30210">
+               <level>0</level>
+               <default>3</default>
+               <dependencies>
+                  <dependency type="visible">
+                     <and>
+                        <condition name="InfoBool" on="property">System.HasAddon(virtual.opi-tools)</condition>
+                        <condition setting="interface" operator="is">1</condition>
+                     </and>
+                  </dependency>
+               </dependencies>
+               <constraints>
+                  <options>
+                     <option label="30041">0</option>
+                     <option label="30042">1</option>
+                     <option label="30043">2</option>
+                     <option label="30044">3</option>
+                     <option label="30045">4</option>
+                     <option label="30046">5</option>
+                     <option label="30047">6</option>
+                     <option label="30048">7</option>
+                     <option label="30049">8</option>
+                     <option label="30050">9</option>
+                  </options>
+               </constraints>
+               <control type="list" format="integer" />
+            </setting>
+
+            <setting id="dc40" type="integer" label="33602" help="33704">
+                <level>0</level>
+                <default>24</default>
+                <dependencies>
+                    <dependency type="visible">
+                            <condition setting="interface" operator="is">1</condition>
+                    </dependency>
+                </dependencies>
+                <constraints>
+                    <options>
+                        <option label="30000">0</option>
+                        <option label="30001">1</option>
+                        <option label="30002">2</option>
+                        <option label="30003">3</option>
+                        <option label="30004">4</option>
+                        <option label="30005">5</option>
+                        <option label="30006">6</option>
+                        <option label="30007">7</option>
+                        <option label="30008">8</option>
+                        <option label="30009">9</option>
+                        <option label="30010">10</option>
+                        <option label="30011">11</option>
+                        <option label="30012">12</option>
+                        <option label="30013">13</option>
+                        <option label="30014">14</option>
+                        <option label="30015">15</option>
+                        <option label="30016">16</option>
+                        <option label="30017">17</option>
+                        <option label="30018">18</option>
+                        <option label="30019">19</option>
+                        <option label="30020">20</option>
+                        <option label="30021">21</option>
+                        <option label="30022">22</option>
+                        <option label="30023">23</option>
+                        <option label="30024">24</option>
+                        <option label="30025">25</option>
+                        <option label="30026">26</option>
+                        <option label="30027">27</option>
+                    </options>
+                </constraints>
+                <control type="list" format="integer">
+                    <heading>33602</heading>
+                </control>
+            </setting>
+
+            <setting id="res40" type="integer" label="33603" help="33704">
+                <level>0</level>
+                <default>25</default>
+                <dependencies>
+                    <dependency type="visible">
+                            <condition setting="interface" operator="is">1</condition>
+                    </dependency>
+                </dependencies>
+                <constraints>
+                    <options>
+                        <option label="30000">0</option>
+                        <option label="30001">1</option>
+                        <option label="30002">2</option>
+                        <option label="30003">3</option>
+                        <option label="30004">4</option>
+                        <option label="30005">5</option>
+                        <option label="30006">6</option>
+                        <option label="30007">7</option>
+                        <option label="30008">8</option>
+                        <option label="30009">9</option>
+                        <option label="30010">10</option>
+                        <option label="30011">11</option>
+                        <option label="30012">12</option>
+                        <option label="30013">13</option>
+                        <option label="30014">14</option>
+                        <option label="30015">15</option>
+                        <option label="30016">16</option>
+                        <option label="30017">17</option>
+                        <option label="30018">18</option>
+                        <option label="30019">19</option>
+                        <option label="30020">20</option>
+                        <option label="30021">21</option>
+                        <option label="30022">22</option>
+                        <option label="30023">23</option>
+                        <option label="30024">24</option>
+                        <option label="30025">25</option>
+                        <option label="30026">26</option>
+                        <option label="30027">27</option>
+                    </options>
+                </constraints>
+                <control type="list" format="integer">
+                    <heading>33603</heading>
+                </control>
+            </setting>
+         </group>
+      </category>
+
+      <category id="logging" label="33002" help="">
+         <group id="2" label="">
+            <setting id="debug" label="30109" help="30209" type="boolean">
+               <level>0</level>
+               <default>false</default>
+               <control type="toggle" />
+            </setting>
+         </group>
+      </category>
+   </section>
+</settings>

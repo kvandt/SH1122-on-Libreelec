@@ -1,0 +1,414 @@
+# Kodi Media Center language file
+# Addon Name: OLEDproc(CM4)
+# Addon id: service.oled.cm4
+# Addon Provider: listener
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "0"
+msgstr ""
+
+msgctxt "#30001"
+msgid "1"
+msgstr ""
+
+msgctxt "#30002"
+msgid "2"
+msgstr ""
+
+msgctxt "#30003"
+msgid "3"
+msgstr ""
+
+msgctxt "#30004"
+msgid "4"
+msgstr ""
+
+msgctxt "#30005"
+msgid "5"
+msgstr ""
+
+msgctxt "#30006"
+msgid "6"
+msgstr ""
+
+msgctxt "#30007"
+msgid "7"
+msgstr ""
+
+msgctxt "#30008"
+msgid "8"
+msgstr ""
+
+msgctxt "#30009"
+msgid "9"
+msgstr ""
+
+msgctxt "#30010"
+msgid "10"
+msgstr ""
+
+msgctxt "#30011"
+msgid "11"
+msgstr ""
+
+msgctxt "#30012"
+msgid "12"
+msgstr ""
+
+msgctxt "#30013"
+msgid "13"
+msgstr ""
+
+msgctxt "#30014"
+msgid "14"
+msgstr ""
+
+msgctxt "#30015"
+msgid "15"
+msgstr ""
+
+msgctxt "#30016"
+msgid "16"
+msgstr ""
+
+msgctxt "#30017"
+msgid "17"
+msgstr ""
+
+msgctxt "#30018"
+msgid "18"
+msgstr ""
+
+msgctxt "#30019"
+msgid "19"
+msgstr ""
+
+msgctxt "#30020"
+msgid "20"
+msgstr ""
+
+msgctxt "#30021"
+msgid "21"
+msgstr ""
+
+msgctxt "#30022"
+msgid "22"
+msgstr ""
+
+msgctxt "#30023"
+msgid "23"
+msgstr ""
+
+msgctxt "#30024"
+msgid "24"
+msgstr ""
+
+msgctxt "#30025"
+msgid "25"
+msgstr ""
+
+msgctxt "#30026"
+msgid "26"
+msgstr ""
+
+msgctxt "#30027"
+msgid "27"
+msgstr ""
+
+msgctxt "#30028"
+msgid "28"
+msgstr ""
+
+msgctxt "#30029"
+msgid "29"
+msgstr ""
+
+msgctxt "#30031"
+msgid "31"
+msgstr ""
+
+msgctxt "#30032"
+msgid "32"
+msgstr ""
+
+msgctxt "#30033"
+msgid "33"
+msgstr ""
+
+msgctxt "#30035"
+msgid "35"
+msgstr ""
+
+msgctxt "#30036"
+msgid "36"
+msgstr ""
+
+msgctxt "#30037"
+msgid "37"
+msgstr ""
+
+msgctxt "#30038"
+msgid "38"
+msgstr ""
+
+msgctxt "#30040"
+msgid "40"
+msgstr ""
+
+msgctxt "#30041"
+msgid "Orange Pi 2"
+msgstr ""
+
+msgctxt "#30042"
+msgid "Orange Pi 3"
+msgstr ""
+
+msgctxt "#30043"
+msgid "Orange Pi Lite2"
+msgstr ""
+
+msgctxt "#30044"
+msgid "Orange Pi One Plus"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Orange Pi PC"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Orange Pi PC2"
+msgstr ""
+
+msgctxt "#30047"
+msgid "Orange Pi PC Plus"
+msgstr ""
+
+msgctxt "#30048"
+msgid "Orange Pi Plus"
+msgstr ""
+
+msgctxt "#30049"
+msgid "Orange Pi Plus 2"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Orange Pi Plus 2E"
+msgstr ""
+
+#format-label: hexaddr
+msgctxt "#30061"
+msgid "0x{:02x}"
+msgstr ""
+
+msgctxt "#30070"
+msgid "128 * 128"
+msgstr ""
+
+msgctxt "#30071"
+msgid "128 * 64"
+msgstr ""
+
+msgctxt "#30072"
+msgid "128 * 32"
+msgstr ""
+
+msgctxt "#30073"
+msgid "64 * 128"
+msgstr ""
+
+msgctxt "#30074"
+msgid "256 * 64"
+msgstr ""
+
+msgctxt "#30075"
+msgid "256 * 48"
+msgstr ""
+
+msgctxt "#30076"
+msgid "256 * 32"
+msgstr ""
+
+msgctxt "#30077"
+msgid "128 * 96"
+msgstr ""
+
+msgctxt "#30078"
+msgid "128 * 48"
+msgstr ""
+
+msgctxt "#30083"
+msgid "Service started"
+msgstr ""
+
+msgctxt "#30084"
+msgid "Service stopped"
+msgstr ""
+
+msgctxt "#30085"
+msgid "Settings changed"
+msgstr ""
+
+msgctxt "#30100"
+msgid "0"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Driver chip"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Resolution"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Emulated number of display lines"
+msgstr ""
+
+msgctxt "#30104"
+msgid "I2C display interface address"
+msgstr ""
+
+msgctxt "#30105"
+msgid "I2C port"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Rotation"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Contrast when \"backlight is on\""
+msgstr ""
+
+msgctxt "#30108"
+msgid "Contrast when \"backlight is off\""
+msgstr ""
+
+msgctxt "#30109"
+msgid "Enable debug logging"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Board"
+msgstr ""
+
+msgctxt "#30111"
+msgid "Interface type"
+msgstr ""
+
+msgctxt "#30112"
+msgid "SPI port"
+msgstr ""
+
+msgctxt "#30113"
+msgid "SPI device"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Regular font"
+msgstr ""
+
+msgctxt "#30115"
+msgid "Fixed width font"
+msgstr ""
+
+msgctxt "#30201"
+msgid "Choice of the driver chip used on the display board."
+msgstr ""
+
+msgctxt "#30202"
+msgid "Display resolution (width * height) in pixels."
+msgstr ""
+
+msgctxt "#30203"
+msgid "When the number of lines is smaller, the letters are larger, but each line can then display only shorter text."
+msgstr ""
+
+msgctxt "#30204"
+msgid ""
+msgstr ""
+
+msgctxt "#30206"
+msgid "If the display is mounted in the base position, set the angle to 0 degrees. Values greater than zero indicate that the display is rotated by the appropriate clockwise angle."
+msgstr ""
+
+msgctxt "#30209"
+msgid "Add-on debugging informations are logged when it is enabled here and at the same time in the global settings Event log - Settings - Enable debug logging."
+msgstr ""
+
+msgctxt "#30210"
+msgid "Choosing the type of board on which LibreELEC/Kodi is running."
+msgstr ""
+
+msgctxt "#30214"
+msgid "Font for most displayed texts. Default folder: \"/storage/.kodi/userdata/fonts/regular/\""
+msgstr ""
+
+msgctxt "#30215"
+msgid "Font for displaying time data. Default folder: \"/storage/.kodi/userdata/fonts/mono/\""
+msgstr ""
+
+msgctxt "#30320"
+msgid "0°"
+msgstr ""
+
+msgctxt "#30321"
+msgid "90°"
+msgstr ""
+
+msgctxt "#30322"
+msgid "180°"
+msgstr ""
+
+msgctxt "#30323"
+msgid "270°"
+msgstr ""
+
+msgctxt "#31000"
+msgid "Addon settings"
+msgstr ""
+
+msgctxt "#31001"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#31002"
+msgid "OK"
+msgstr ""
+
+# Settings
+msgctxt "#33000"
+msgid "Display"
+msgstr ""
+
+msgctxt "#33001"
+msgid "Connection"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Logging"
+msgstr ""
+
+msgctxt "#33602"
+msgid "DC pin"
+msgstr ""
+
+msgctxt "#33702"
+msgid "Pin number on the GPIO header (\"BOARD\" numbering)."
+msgstr ""
+
+msgctxt "#33603"
+msgid "RES pin"
+msgstr ""
+
+msgctxt "#33703"
+msgid "Pin number on the GPIO header (\"BOARD\" numbering)."
+msgstr ""
+
+msgctxt "#33704"
+msgid "Pin number on the GPIO header (\"BCM\" numbering)."
+msgstr ""
+
+

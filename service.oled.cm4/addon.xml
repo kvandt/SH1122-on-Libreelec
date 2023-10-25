@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.oled.cm4"
+       name="OLEDproc(CM4)"
+       version="10.80.0.104"
+       provider-name="LuRu">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.luma" />
+    <import addon="script.module.cbor2" />
+    <import addon="script.module.smbus2" />
+    <import addon="script.module.spidev" />
+    <import addon="virtual.rpi-tools" />
+  </requires>
+  <extension point="xbmc.service" library="service.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">LCDproc: Software to display system information from Kodi on a graphic OLED display</summary>
+    <summary lang="cs_CZ">LCDproc: Software k zobrazování systémových informací Kodi na grafických displejích OLED</summary>
+    <description lang="en_GB">
+The add-on displays real-time information about Kodi activity on graphic OLED displays. For these displays, it is a replacement for the LCDproc add-on. The add-on is dependent on the add-ons script.module.luma, script.module.cbor2, script.module.smbus2 and virtual.rpi-tools. It also cannot work without the XBMC LCDproc add-on because both add-ons work together as client and server, where OLEDproc is the server and XBMC LCDproc is the client. Compared to the LCDproc add-on, the OLEDproc add-on has some minor limitations. For example:
+- the "Scroll mode" setting of the XBMC LCDproc add-on is ignored (scrolling works only one way)
+- the "Show heartbeat symbol" setting of the XBMC LCDproc add-on is ignored (display of symbol is permanently disabled)
+- some "advanced configurables" settings in the LCD.xml file (XBMC LCDproc add-on configuration file) are ignored and using non-default values can cause problems
+- a proportional font is used for most texts. As such, it makes no sense to use the $INFO[LCD.AlignCenter] and $INFO[LCD.AlignRight] parameters in the LCD.xml file (the XBMC LCDproc add-on does not have the ability to calculate the position of the text correctly)
+On the other hand, it has several advantages over the LCDproc add-on:
+- fully supports native Kodi encoding (UTF-8), so it displays all accented characters
+- the progress bar and the display of time data in large characters (BigDigits) is without disturbing gaps, so it looks much more natural
+- a proportional font is used to display texts, which is generally more readable and looks better than a non-proportional font
+Supported are displays with sh1106, sh1107, ssd1306, ssd1309, ssd1322, ssd1322_nhd, ssd1325, ssd1327, ssd1351 and ssd1362.
+Currently, only the function of displays with chips sh1106, sh1107 and ssd1306 is really verified.
+    </description>
+    <description lang="cs_CZ">
+Doplněk zobrazuje v reálném čase na grafických OLED displejích informace o činnosti Kodi. Pro tyto displeje je náhradou doplňku LCDproc. Doplněk je závislý na doplňcích script.module.luma, script.module.cbor2, script.module.smbus2 a virtual.rpi-tools. Nemůže fungovat také bez doplňku XBMC LCDproc, protože oba doplňky spolupracují jako klient a server, kde OLEDproc je server a XBMC LCDproc je klient. Oproti doplňku LCDproc má doplněk OLEDproc některá drobná omezení. Například:
+- je ignorováno nastavení "Scroll mode" doplňku XBMC LCDproc (skrolování funguje jen jedním způsobem)
+- je ignorováno nastavení "Show heartbeat symbol" doplňku XBMC LCDproc (zobrazování symbolu je napevno vypnuto)
+- některá nastavení "advanced configurables" v souboru LCD.xml (konfigurační soubor doplňku XBMC LCDproc) jsou ignorována a použití nevýchozích hodnot může způsobovat problémy
+- pro většinu textů se používá proporcionální font. Vzhledem k tomu nemá smysl používat parametry $INFO[LCD.AlignCenter] a $INFO[LCD.AlignRight] v souboru LCD.xml (doplněk XBMC LCDproc nemá možnost správně spočítat pozici textu)
+Na druhou stranu má oproti doplňku LCDproc i několik předností:
+- plně podporuje nativní kódování Kodi (UTF-8), takže zobrazuje všechny znaky s diakritikou
+- ukazatel průběhu a zobrazování časových údajů velkými znaky je bez rušivých mezer, takže vypadá mnohem přirozeněji
+- na zobrazování textů je používáno proporcionální písmo, které je obecně čitelnější a lépe vypadá, než písmo neproporciální
+Podporovány jsou displeje s čipem sh1106, sh1107, ssd1306, ssd1309, ssd1322, ssd1322_nhd, ssd1325, ssd1327, ssd1351 a ssd1362.
+Reálně ověřená je aktuálně pouze funkce displejů s čipy sh1106, sh1107 a ssd1306.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+103
+- Fix: more bugs related to adding SPI interface support
+- Fix: a problem with a display that is wider than 128 pixels
+- Fix: a problem with a greyscale display
+102
+- Fix: wrong label when configuring RES pin
+101
+- Added support for SPI displays
+100
+- Initial addon
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+    </assets>
+  </extension>
+</addon>
